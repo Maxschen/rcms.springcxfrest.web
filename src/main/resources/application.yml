@@ -1,0 +1,24 @@
+
+server:  
+  port: 9000
+  servlet-path: /iamyouareme
+cxf:
+  path: /iamyouareme/services  
+  servlet.init:  
+    service-list-path: /info 
+  jaxrs:
+    component-scan: true
+    classes-scan-packages: com.stone.it.rcms.iamyouareme
+    
+spring:
+    datasource:
+        name: iamyouareme
+        url: jdbc:mysql://127.0.0.1:3306/iamyouareme
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+               
+mybatis:
+  mapper-locations: classpath:com.stone.it.rcms.iamyouareme.**.dao/*.xml
+  type-aliases-package: com.stone.it.rcms.iamyouareme.**.entity
+    
