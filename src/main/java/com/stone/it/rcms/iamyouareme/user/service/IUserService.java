@@ -26,6 +26,6 @@ public interface IUserService {
 	
 	@GET
 	@Path("/find/list/page/{curPage}/{pageSize}")
-	public PageResult<UserEntity> findPageResultUsers(@QueryParam("")UserEntity userEntity,@PathParam("")PageEntity pageEntitys) throws Exception;
+	public PageResult<UserEntity> findPageResultUsers(@QueryParam("")UserEntity userEntity,@PathParam("")PageEntity pageEntity) throws Exception;
 	
 }
